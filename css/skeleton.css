@@ -166,7 +166,9 @@ img {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: white; }
+  color: white; 
+  text-decoration-line: none;
+}
 a:hover {
   color: white; }
 
@@ -486,6 +488,7 @@ hr {
   margin: 0 0 2rem;
   border-bottom: #4666ff 1px solid;
   width: 100%;
+  
 }
 .line>p {
   margin: 2.3rem  0 .2rem;
