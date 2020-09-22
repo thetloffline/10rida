@@ -5,7 +5,9 @@ const processForm = form => {
     body: data,
   })
   .then(() => {
-    form.innerHTML = `<div class="success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+    const successMsg = document.querySelector('#success-msg')
+    form.classList.add("hidden")
+    successMsg.classList.add("show")
   })
   .catch(error => {
     form.innerHTML = `<div class="error">Error: ${error}</div>`;
