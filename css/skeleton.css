@@ -463,6 +463,13 @@ hr {
   display: block !important;
   animation: slide-left 0.4s ease;
 }
+.success {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 1rem;
+  color: #099c8c;
+  font-size: 3rem;
+}
 .quote{
   margin: 8rem auto 3rem;
   padding: 4rem;
@@ -510,8 +517,6 @@ hr {
   font-weight: 900;
   border-radius: 20rem;
   background-color: #4666ff;
-
-
 }
 
 
