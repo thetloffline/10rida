@@ -94,7 +94,14 @@
             <div class="column">
               <h1 class="u-center u-bottom-125">Anna tagasiside</h1>
   
-              <form action="https://getsimpleform.com/messages?form_api_token=1addf9fe5927fbda08dc7146a1a0735f" name="cards-feedback" id="cards-feedback" method="POST" data-netlify="true">
+              <form name="cards-feedback" id="cards-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+                <div hidden aria-hidden="true">
+                  <label>
+                    Don’t fill this out if you're human:
+                    <input name="bot-field" />
+                  </label>
+                </div>
   
                 <label for="emailInput">
                   Minu e-mail (valikuline)
