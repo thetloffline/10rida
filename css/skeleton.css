@@ -504,7 +504,7 @@ hr {
   color: #4666ff;
   outline: none;
 }
-.line>p:hover {
+.line>p:hover, .line>p:active {
   color: white;
 }
 .contact {
