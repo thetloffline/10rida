@@ -534,7 +534,6 @@ hr {
 }
 #parallelogram {
   position: absolute;
-  
   z-index: -1;
   width: 5%;
   height: 100vh;
