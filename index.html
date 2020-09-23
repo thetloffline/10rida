@@ -78,7 +78,21 @@
   </div>
 
 </div>
-
+<script>
+  function setAttribute () {
+    lines.forEach(el => {
+      el.firstElementChild.setAttribute('style', 'color: white;')
+    });
+  }
+  function resetAttribute () {
+    lines.forEach(el => {
+      el.firstElementChild.setAttribute('style', 'color: #4666ff;')
+    });
+  }
+  const lines = document.querySelectorAll('.line')
+  document.addEventListener("touchstart", setAttribute, true);
+  document.addEventListener("touchend", resetAttribute, true);
+</script>
 </body>
 
 </html>
