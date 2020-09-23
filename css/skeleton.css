@@ -166,8 +166,9 @@ img {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: white; 
+  color: #4666ff; 
   text-decoration-line: none;
+  text-decoration: none;
 }
 a:hover {
   color: white; }
