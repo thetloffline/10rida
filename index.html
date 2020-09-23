@@ -31,8 +31,9 @@
 
 <body>
   <div class="container">
-
+  
     <div class="row u-cover u-align-center" id="ten-lines">
+      <div id="triangle-topright"></div>
       <div class="twelve columns">
         <div class="line">
           <p >Ten</p>
@@ -67,14 +68,17 @@
       </div>
     </div>
 
+  <div id="parallelogram"></div>
+
   <div class="row  u-cover u-align-center" id="contact">
     <div class="column">
-      <a href="mailto:thetloffline@gmail.com">
-        <div class="contact">
+      <a href="mailto:thetloffline@gmail.com"  class="contact">
+        <div>
           <div>Get in touch</div>
         </div>
       </a>
     </div>
+    <div class="rida">10_rida</div>
   </div>
 
 </div>
@@ -93,6 +97,11 @@
   }
   const lines = document.querySelectorAll('.line')
   const link = document.querySelector('a')
+  lines.forEach(el => {
+    el.addEventListener("mouseover", () => {
+  el.firstElementChild.setAttribute('style', 'color: white;')
+});
+  });
   document.addEventListener("touchstart", setAttribute, true);
   document.addEventListener("touchend", resetAttribute, true);
 </script>
