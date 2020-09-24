@@ -31,80 +31,78 @@
 
 <body>
   <div class="container">
-  
+
     <div class="row u-cover u-align-center" id="ten-lines">
       <div id="triangle-topright"></div>
       <div class="twelve columns">
         <div class="line">
-          <p >Ten</p>
+          <p>Ten</p>
         </div>
         <div class="line">
-          <p >lines</p>
+          <p>lines</p>
         </div>
         <div class="line">
-          <p >is</p>
+          <p>is</p>
         </div>
         <div class="line">
-          <p >all</p>
+          <p>all</p>
         </div>
         <div class="line">
-          <p >you</p>
+          <p>you</p>
         </div>
         <div class="line">
-          <p >need</p>
+          <p>need</p>
         </div>
         <div class="line">
-          <p >to</p>
+          <p>to</p>
         </div>
         <div class="line">
-          <p >deliver</p>
+          <p>deliver</p>
         </div>
         <div class="line">
-          <p >the</p>
+          <p>the</p>
         </div>
         <div class="line">
-          <p >message</p>
+          <p>message</p>
         </div>
       </div>
     </div>
 
-  <div id="parallelogram"></div>
 
-  <div class="row  u-cover u-align-center" id="contact">
-    <div class="column">
-      <a href="mailto:thetloffline@gmail.com"  class="contact">
-        <div>
+    <div class="row  u-cover u-align-center" id="contact">
+      <div id="parallelogram"></div>
+      <div class="column">
+        <a href="mailto:thetloffline@gmail.com" class="contact">
           <div>Get in touch</div>
-        </div>
-      </a>
+        </a>
+      </div>
+      <div class="rida">10_rida</div>
     </div>
-    <div class="rida">10_rida</div>
-  </div>
 
-</div>
-<script>
-  function setAttribute () {
+  </div>
+  <script>
+    function setAttribute() {
+      lines.forEach(el => {
+        el.firstElementChild.setAttribute('style', 'color: white;')
+      });
+      link.setAttribute('style', 'color: white;')
+    }
+    function resetAttribute() {
+      lines.forEach(el => {
+        el.firstElementChild.setAttribute('style', 'color: #4666ff;')
+      });
+      link.setAttribute('style', 'color: #4666ff;')
+    }
+    const lines = document.querySelectorAll('.line')
+    const link = document.querySelector('a')
     lines.forEach(el => {
-      el.firstElementChild.setAttribute('style', 'color: white;')
+      el.addEventListener("mouseover", () => {
+        el.firstElementChild.setAttribute('style', 'color: white;')
+      });
     });
-    link.setAttribute('style', 'color: white;')
-  }
-  function resetAttribute () {
-    lines.forEach(el => {
-      el.firstElementChild.setAttribute('style', 'color: #4666ff;')
-    });
-    link.setAttribute('style', 'color: #4666ff;')
-  }
-  const lines = document.querySelectorAll('.line')
-  const link = document.querySelector('a')
-  lines.forEach(el => {
-    el.addEventListener("mouseover", () => {
-  el.firstElementChild.setAttribute('style', 'color: white;')
-});
-  });
-  document.addEventListener("touchstart", setAttribute, true);
-  document.addEventListener("touchend", resetAttribute, true);
-</script>
+    document.addEventListener("touchstart", setAttribute, true);
+    document.addEventListener("touchend", resetAttribute, true);
+  </script>
 </body>
 
 </html>
