@@ -35,34 +35,34 @@
     <div class="row u-cover u-align-center" id="ten-lines">
       <div class="twelve columns">
         <div class="line">
-          <p >Ten</p>
+          <p id="Ten"></p>
         </div>
         <div class="line">
-          <p >lines</p>
+          <p id="lines"></p>
         </div>
         <div class="line">
-          <p >is</p>
+          <p id="is"></p>
         </div>
         <div class="line">
-          <p >all</p>
+          <p id="all"></p>
         </div>
         <div class="line">
-          <p >you</p>
+          <p id="you"></p>
         </div>
         <div class="line">
-          <p >need</p>
+          <p id="need"></p>
         </div>
         <div class="line">
-          <p >to</p>
+          <p id="to"></p>
         </div>
         <div class="line">
-          <p >deliver</p>
+          <p id="deliver"></p>
         </div>
         <div class="line">
-          <p >the</p>
+          <p id="the"></p>
         </div>
         <div class="line">
-          <p >message</p>
+          <p id="message"></p>
         </div>
       </div>
     </div>
@@ -77,22 +77,29 @@
 
 </div>
 <script>
-  function setAttribute () {
-    lines.forEach(el => {
-      el.firstElementChild.setAttribute('style', 'color: white;')
-    });
-    link.setAttribute('style', 'color: white;')
+  const text = ["Ten", "lines", "is", "all", "you", "need", "to", "deliver", "the", "message"]
+  const speed = 200
+
+  const cursor = document.createElement("span")
+  cursor.setAttribute("id", "cursor")
+
+  function typeWriter(wordIndex = 0, characterIndex = 0) {
+    const word = text[wordIndex]
+    const character = word.charAt(characterIndex)
+    const endOfText = (wordIndex == text.length - 1) && (characterIndex == text[text.length - 1].length)
+
+    if (word && character) {
+      if (characterIndex == 0) document.getElementById(word).after(cursor)
+      document.getElementById(word).innerHTML += character
+      setTimeout(() => typeWriter(wordIndex, characterIndex + 1), speed)
+    } else {
+      if (endOfText) return
+      else document.getElementById("cursor").remove()
+      setTimeout(() => typeWriter(wordIndex + 1, 0), speed)
+    }
   }
-  function resetAttribute () {
-    lines.forEach(el => {
-      el.firstElementChild.setAttribute('style', 'color: #4666ff;')
-    });
-    link.setAttribute('style', 'color: #4666ff;')
-  }
-  const lines = document.querySelectorAll('.line')
-  const link = document.querySelector('a')
-  document.addEventListener("touchstart", setAttribute, true);
-  document.addEventListener("touchend", resetAttribute, true);
+
+  typeWriter()
 </script>
 </body>
 
