@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; 
@@ -52,7 +52,7 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 100%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -477,18 +477,19 @@ hr {
 .line {
   width: 100%; 
   height: 6%;
-  background-color: #4666ff;
+  /* background-color: #4666ff; */
   border-bottom: #4666ff 1px solid;
 }
 .line>p {
-  margin: auto 1.2rem;
+  margin: auto 3%;
   font-size: 3vh;
   letter-spacing: .1rem;
   color: #4666ff;
   outline: none;
 }
 .line>p:hover {
-  color: white;
+  /* color: white; */
+  display: none;
 }
 .contact {
   display: flex;
