@@ -415,23 +415,11 @@ form {
   margin: 0 !important;
 }
 .u-align-center {
-  /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   flex-flow: wrap;
-}
-.u-center {
-  text-align: center;
-}
-.no-wrap {
-  flex-flow: nowrap;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 /* Misc
@@ -465,19 +453,6 @@ hr {
   display: block !important;
   animation: slide-left 0.4s ease;
 }
-.success {
-  text-align: center;
-  background-color: #fafafa;
-  padding: 1rem;
-  color: #099c8c;
-  font-size: 3rem;
-}
-.quote{
-  margin: 8rem auto 3rem;
-  padding: 4rem;
-  background-color: #f0fbff;
-  font-size: 2.4rem;
-}
 .title {
   margin-top: -3rem;
 }
@@ -493,15 +468,20 @@ hr {
 .header {
   margin: 0 0 3rem;
 }
+.lines {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
 .line {
   width: 100%; 
-  margin: 0 0 2rem;
   background-color: #4666ff;
   border-bottom: #4666ff 1px solid;
 }
 .line>p {
-  margin: 2.3rem  1rem .2rem;
-  line-height: 3rem;
+  margin: 1.3rem  1.2rem 1.2rem;
+  line-height: 1.2rem;
   letter-spacing: .1rem;
   color: #4666ff;
   outline: none;
@@ -522,7 +502,11 @@ hr {
   border-radius: 20rem;
   background-color: #4666ff;
 }
-
+.rida {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
