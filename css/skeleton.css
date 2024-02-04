@@ -488,8 +488,8 @@ hr {
   outline: none;
 }
 .line>p:hover {
-  /* color: white; */
-  display: none;
+  color: white;
+  /* display: none; */
 }
 .contact {
   display: flex;
