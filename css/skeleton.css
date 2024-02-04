@@ -482,7 +482,7 @@ hr {
 }
 .line>p {
   margin: auto 3%;
-  font-size: 3vh;
+  font-size: 3svh;
   letter-spacing: .1rem;
   color: #4666ff;
   outline: none;
