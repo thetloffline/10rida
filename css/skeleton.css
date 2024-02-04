@@ -497,11 +497,11 @@ hr {
   align-items: center;
   flex-direction: column;
   margin: auto;
-  width: 30vmax;
-  height: 30vmax;
+  width: 40vmin;
+  height: 40vmin;
   font-size: 3vh;
   font-weight: 900;
-  border-radius: 30vmax;
+  border-radius: 40vmin;
   background-color: #4666ff;
 }
 .rida {
